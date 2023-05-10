@@ -30,6 +30,9 @@ def convolutional(input_layer, filters_shape, downsample=False, activate=True, b
                                   kernel_initializer=tf.random_normal_initializer(stddev=0.01),
                                   bias_initializer=tf.constant_initializer(0.))(input_layer)
 
+    # conv = tf.keras.layers.Conv2D(filters=filters_shape[-1], kernel_size=filters_shape[0], strides=strides,
+    #                               padding=padding, activation=activate_type)(input_layer)
+
     if bn: conv = BatchNormalization()(conv)
     if activate == True:
         if activate_type == "leaky":

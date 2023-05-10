@@ -1,0 +1,19 @@
+python -c "import tensorflow as tf; print(tf.__version__)"
+python save_model.py --weights ./data/yolov4.weights --output ./checkpoints/yolov4-416 --input_size 416 --model yolov4
+python new.py
+pip install tensorflow==2.11.0rc0
+pip install -r requirements.txt
+ pip install Cmake
+ pip uninstall tensorflow-intel
+ pip uninstall opt_einsum
+ python -m pip install --upgrade pip
+ pip install --editable .
+ pip install tflite-support
+pip install keras==2.12.0rc1 --user
+
+
+
+
+
+
+
